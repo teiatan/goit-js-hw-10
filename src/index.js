@@ -25,6 +25,8 @@ function findCountry(e) {
     .then(renderCountries)
     .catch(error => {
       Notify.failure('Oops, there is no country with that name');
+      refs.counryInfo.innerHTML = '';
+      refs.countriesList.innerHTML = '';
       return error;
     });
 }
